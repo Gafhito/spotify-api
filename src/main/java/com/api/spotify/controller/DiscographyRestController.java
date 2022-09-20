@@ -1,7 +1,6 @@
 package com.api.spotify.controller;
 
 import com.api.spotify.entity.Discography;
-import com.api.spotify.repository.DiscographyRepository;
 import com.api.spotify.service.DiscographyService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,11 +14,9 @@ import java.util.Optional;
 public class DiscographyRestController {
 
     private DiscographyService discographyService;
-    private DiscographyRepository discographyRepository;
 
-    public DiscographyRestController(DiscographyService discographyService, DiscographyRepository discographyRepository) {
+    public DiscographyRestController(DiscographyService discographyService) {
         this.discographyService = discographyService;
-        this.discographyRepository = discographyRepository;
     }
 
     @GetMapping

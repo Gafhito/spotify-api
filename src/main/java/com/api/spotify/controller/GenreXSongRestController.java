@@ -1,7 +1,6 @@
 package com.api.spotify.controller;
 
 import com.api.spotify.entity.GenreXSong;
-import com.api.spotify.repository.GenreXSongRepository;
 import com.api.spotify.service.GenreXSongService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,11 +13,9 @@ import java.util.Optional;
 @RequestMapping("/genre_x_song")
 public class GenreXSongRestController {
 
-    private GenreXSongRepository genreXSongRepository;
     private GenreXSongService genreXSongService;
 
-    public GenreXSongRestController(GenreXSongRepository genreXSongRepository, GenreXSongService genreXSongService) {
-        this.genreXSongRepository = genreXSongRepository;
+    public GenreXSongRestController(GenreXSongService genreXSongService) {
         this.genreXSongService = genreXSongService;
     }
 

@@ -1,7 +1,6 @@
 package com.api.spotify.controller;
 
 import com.api.spotify.entity.Country;
-import com.api.spotify.repository.CountryRepository;
 import com.api.spotify.service.CountryService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,11 +14,9 @@ import java.util.Optional;
 public class CountryRestController {
 
     private CountryService countryService;
-    private CountryRepository countryRepository;
 
-    public CountryRestController(CountryService countryService, CountryRepository countryRepository) {
+    public CountryRestController(CountryService countryService) {
         this.countryService = countryService;
-        this.countryRepository = countryRepository;
     }
 
     @GetMapping

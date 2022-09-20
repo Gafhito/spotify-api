@@ -1,7 +1,6 @@
 package com.api.spotify.controller;
 
 import com.api.spotify.entity.PlaylistStatus;
-import com.api.spotify.repository.PlaylistStatusRepository;
 import com.api.spotify.service.PlaylistStatusService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,11 +13,9 @@ import java.util.Optional;
 @RequestMapping("/playlist_status")
 public class PlaylistStatusRestController {
 
-    private PlaylistStatusRepository playlistStatusRepository;
     private PlaylistStatusService playlistStatusService;
 
-    public PlaylistStatusRestController(PlaylistStatusRepository playlistStatusRepository, PlaylistStatusService playlistStatusService) {
-        this.playlistStatusRepository = playlistStatusRepository;
+    public PlaylistStatusRestController(PlaylistStatusService playlistStatusService) {
         this.playlistStatusService = playlistStatusService;
     }
 

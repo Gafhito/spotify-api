@@ -1,8 +1,6 @@
 package com.api.spotify.controller;
 
 import com.api.spotify.entity.Genre;
-import com.api.spotify.repository.GenreRepository;
-import com.api.spotify.service.CountryService;
 import com.api.spotify.service.GenreService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,11 +14,9 @@ import java.util.Optional;
 public class GenreRestController {
 
     private GenreService genreService;
-    private GenreRepository genreRepository;
 
-    public GenreRestController(GenreService genreService, GenreRepository genreRepository) {
+    public GenreRestController(GenreService genreService) {
         this.genreService = genreService;
-        this.genreRepository = genreRepository;
     }
 
     @GetMapping

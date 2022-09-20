@@ -1,7 +1,6 @@
 package com.api.spotify.controller;
 
 import com.api.spotify.entity.UserType;
-import com.api.spotify.repository.UserTypeRepository;
 import com.api.spotify.service.UserTypeService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,11 +14,9 @@ import java.util.Optional;
 public class UserTypeRestController {
 
     private UserTypeService userTypeService;
-    private UserTypeRepository userTypeRepository;
 
-    public UserTypeRestController(UserTypeService userTypeService, UserTypeRepository userTypeRepository) {
+    public UserTypeRestController(UserTypeService userTypeService) {
         this.userTypeService = userTypeService;
-        this.userTypeRepository = userTypeRepository;
     }
 
     @GetMapping

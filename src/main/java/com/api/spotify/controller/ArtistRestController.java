@@ -1,7 +1,6 @@
 package com.api.spotify.controller;
 
 import com.api.spotify.entity.Artist;
-import com.api.spotify.repository.ArtistRepository;
 import com.api.spotify.service.ArtistService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,11 +14,9 @@ import java.util.Optional;
 public class ArtistRestController {
 
     private ArtistService artistService;
-    private ArtistRepository artistRepository;
 
-    public ArtistRestController(ArtistService artistService, ArtistRepository artistRepository) {
+    public ArtistRestController(ArtistService artistService) {
         this.artistService = artistService;
-        this.artistRepository = artistRepository;
     }
 
     @GetMapping
