@@ -26,8 +26,10 @@ public class SpotifyApplication {
 	private SongService songService;
 	private GenreXSongRepository genreXSongRepository;
 	private GenreXSongService genreXSongService;
+	private PlaylistStatusRepository playlistStatusRepository;
+	private PlaylistStatusService playlistStatusService;
 
-	public SpotifyApplication(ArtistRepository artistRepository, ArtistService artistService, CountryRepository countryRepository, CountryService countryService, DiscographyRepository discographyRepository, DiscographyService discographyService, AlbumRepository albumRepository, AlbumService albumService, UserTypeRepository userTypeRepository, UserTypeService userTypeService, UserRepository userRepository, UserService userService, GenreRepository genreRepository, GenreService genreService, SongRepository songRepository, SongService songService, GenreXSongRepository genreXSongRepository, GenreXSongService genreXSongService) {
+	public SpotifyApplication(ArtistRepository artistRepository, ArtistService artistService, CountryRepository countryRepository, CountryService countryService, DiscographyRepository discographyRepository, DiscographyService discographyService, AlbumRepository albumRepository, AlbumService albumService, UserTypeRepository userTypeRepository, UserTypeService userTypeService, UserRepository userRepository, UserService userService, GenreRepository genreRepository, GenreService genreService, SongRepository songRepository, SongService songService, GenreXSongRepository genreXSongRepository, GenreXSongService genreXSongService, PlaylistStatusRepository playlistStatusRepository, PlaylistStatusService playlistStatusService) {
 		this.artistRepository = artistRepository;
 		this.artistService = artistService;
 		this.countryRepository = countryRepository;
@@ -46,6 +48,8 @@ public class SpotifyApplication {
 		this.songService = songService;
 		this.genreXSongRepository = genreXSongRepository;
 		this.genreXSongService = genreXSongService;
+		this.playlistStatusRepository = playlistStatusRepository;
+		this.playlistStatusService = playlistStatusService;
 	}
 
 	public static void main(String[] args) {
