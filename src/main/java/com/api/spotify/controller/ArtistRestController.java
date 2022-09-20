@@ -33,7 +33,7 @@ public class ArtistRestController {
     }
 
     @PostMapping
-    public ResponseEntity<Artist> newArtist(@RequestBody Artist newArtist) {
+    public ResponseEntity<Artist> createArtist(@RequestBody Artist newArtist) {
         return new ResponseEntity<>(artistService.save(newArtist), HttpStatus.CREATED);
     }
 
