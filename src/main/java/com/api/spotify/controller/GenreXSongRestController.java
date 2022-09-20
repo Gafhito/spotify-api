@@ -23,12 +23,12 @@ public class GenreXSongRestController {
     }
 
     @GetMapping
-    public List<GenreXSong> getAll() {
+    public List<GenreXSong> getList() {
         return genreXSongService.getAll();
     }
 
     @GetMapping("/{id}")
-    public Optional<GenreXSong> getOne(@PathVariable Long id) {
+    public Optional<GenreXSong> getGenreXSong(@PathVariable Long id) {
         return genreXSongService.getOne(id);
     }
 

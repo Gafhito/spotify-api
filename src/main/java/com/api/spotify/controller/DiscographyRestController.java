@@ -28,7 +28,7 @@ public class DiscographyRestController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Discography> getOne(@PathVariable Long id) {
+    public Optional<Discography> getDiscography(@PathVariable Long id) {
         return discographyService.getOne(id);
     }
 

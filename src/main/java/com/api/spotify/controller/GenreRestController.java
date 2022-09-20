@@ -29,7 +29,7 @@ public class GenreRestController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Genre> getOne(@PathVariable Long id) {
+    public Optional<Genre> getGenre(@PathVariable Long id) {
         return genreService.getOne(id);
     }
 

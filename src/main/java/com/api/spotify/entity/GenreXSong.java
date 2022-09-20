@@ -7,14 +7,14 @@ public class GenreXSong {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "id", nullable = false)
     private Long id;
 
-    @JoinColumn(name = "song")
+    @JoinColumn(name = "song", nullable = false)
     @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Song song;
 
-    @JoinColumn(name = "genre")
+    @JoinColumn(name = "genre", nullable = false)
     @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Genre genre;
 

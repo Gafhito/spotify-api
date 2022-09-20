@@ -28,8 +28,10 @@ public class SpotifyApplication {
 	private GenreXSongService genreXSongService;
 	private PlaylistStatusRepository playlistStatusRepository;
 	private PlaylistStatusService playlistStatusService;
+	private PlaylistRepository playlistRepository;
+	private PlaylistService playlistService;
 
-	public SpotifyApplication(ArtistRepository artistRepository, ArtistService artistService, CountryRepository countryRepository, CountryService countryService, DiscographyRepository discographyRepository, DiscographyService discographyService, AlbumRepository albumRepository, AlbumService albumService, UserTypeRepository userTypeRepository, UserTypeService userTypeService, UserRepository userRepository, UserService userService, GenreRepository genreRepository, GenreService genreService, SongRepository songRepository, SongService songService, GenreXSongRepository genreXSongRepository, GenreXSongService genreXSongService, PlaylistStatusRepository playlistStatusRepository, PlaylistStatusService playlistStatusService) {
+	public SpotifyApplication(ArtistRepository artistRepository, ArtistService artistService, CountryRepository countryRepository, CountryService countryService, DiscographyRepository discographyRepository, DiscographyService discographyService, AlbumRepository albumRepository, AlbumService albumService, UserTypeRepository userTypeRepository, UserTypeService userTypeService, UserRepository userRepository, UserService userService, GenreRepository genreRepository, GenreService genreService, SongRepository songRepository, SongService songService, GenreXSongRepository genreXSongRepository, GenreXSongService genreXSongService, PlaylistStatusRepository playlistStatusRepository, PlaylistStatusService playlistStatusService, PlaylistRepository playlistRepository, PlaylistService playlistService) {
 		this.artistRepository = artistRepository;
 		this.artistService = artistService;
 		this.countryRepository = countryRepository;
@@ -50,6 +52,8 @@ public class SpotifyApplication {
 		this.genreXSongService = genreXSongService;
 		this.playlistStatusRepository = playlistStatusRepository;
 		this.playlistStatusService = playlistStatusService;
+		this.playlistRepository = playlistRepository;
+		this.playlistService = playlistService;
 	}
 
 	public static void main(String[] args) {
