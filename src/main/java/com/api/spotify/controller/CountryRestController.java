@@ -28,7 +28,7 @@ public class CountryRestController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Country> getCountry(@PathVariable Long id) {
+    public Optional<Country> getOne(@PathVariable Long id) {
         return countryService.getOne(id);
     }
 
