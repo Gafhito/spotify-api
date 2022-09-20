@@ -10,7 +10,7 @@ import java.util.Optional;
 @Service
 public class CountryService {
 
-    CountryRepository countryRepository;
+    private CountryRepository countryRepository;
 
     public CountryService(CountryRepository countryRepository) {
         this.countryRepository = countryRepository;

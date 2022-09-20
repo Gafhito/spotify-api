@@ -10,7 +10,7 @@ import java.util.Optional;
 @Service
 public class DiscographyService {
 
-    DiscographyRepository discographyRepository;
+    private DiscographyRepository discographyRepository;
 
     public DiscographyService(DiscographyRepository discographyRepository) {
         this.discographyRepository = discographyRepository;
