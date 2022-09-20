@@ -14,8 +14,8 @@ import java.util.Optional;
 @RequestMapping("/country")
 public class CountryRestController {
 
-    CountryService countryService;
-    CountryRepository countryRepository;
+    private CountryService countryService;
+    private CountryRepository countryRepository;
 
     public CountryRestController(CountryService countryService, CountryRepository countryRepository) {
         this.countryService = countryService;

@@ -1,13 +1,7 @@
 package com.api.spotify;
 
-import com.api.spotify.repository.AlbumRepository;
-import com.api.spotify.repository.ArtistRepository;
-import com.api.spotify.repository.CountryRepository;
-import com.api.spotify.repository.DiscographyRepository;
-import com.api.spotify.service.AlbumService;
-import com.api.spotify.service.ArtistService;
-import com.api.spotify.service.CountryService;
-import com.api.spotify.service.DiscographyService;
+import com.api.spotify.repository.*;
+import com.api.spotify.service.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -22,8 +16,10 @@ public class SpotifyApplication {
 	private DiscographyService discographyService;
 	private AlbumRepository albumRepository;
 	private AlbumService albumService;
+	private UserTypeRepository userTypeRepository;
+	private UserTypeService userTypeService;
 
-	public SpotifyApplication(ArtistRepository artistRepository, ArtistService artistService, CountryRepository countryRepository, CountryService countryService, DiscographyRepository discographyRepository, DiscographyService discographyService, AlbumRepository albumRepository, AlbumService albumService) {
+	public SpotifyApplication(ArtistRepository artistRepository, ArtistService artistService, CountryRepository countryRepository, CountryService countryService, DiscographyRepository discographyRepository, DiscographyService discographyService, AlbumRepository albumRepository, AlbumService albumService, UserTypeRepository userTypeRepository, UserTypeService userTypeService) {
 		this.artistRepository = artistRepository;
 		this.artistService = artistService;
 		this.countryRepository = countryRepository;
@@ -32,6 +28,8 @@ public class SpotifyApplication {
 		this.discographyService = discographyService;
 		this.albumRepository = albumRepository;
 		this.albumService = albumService;
+		this.userTypeRepository = userTypeRepository;
+		this.userTypeService = userTypeService;
 	}
 
 	public static void main(String[] args) {

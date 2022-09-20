@@ -14,8 +14,8 @@ import java.util.Optional;
 @RequestMapping("/album")
 public class AlbumRestController {
 
-    AlbumService albumService;
-    AlbumRepository albumRepository;
+    private AlbumService albumService;
+    private AlbumRepository albumRepository;
 
     public AlbumRestController(AlbumService albumService, AlbumRepository albumRepository) {
         this.albumService = albumService;
