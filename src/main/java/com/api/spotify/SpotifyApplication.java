@@ -22,8 +22,10 @@ public class SpotifyApplication {
 	private UserService userService;
 	private GenreRepository genreRepository;
 	private GenreService genreService;
+	private SongRepository songRepository;
+	private SongService songService;
 
-	public SpotifyApplication(ArtistRepository artistRepository, ArtistService artistService, CountryRepository countryRepository, CountryService countryService, DiscographyRepository discographyRepository, DiscographyService discographyService, AlbumRepository albumRepository, AlbumService albumService, UserTypeRepository userTypeRepository, UserTypeService userTypeService, UserRepository userRepository, UserService userService, GenreRepository genreRepository, GenreService genreService) {
+	public SpotifyApplication(ArtistRepository artistRepository, ArtistService artistService, CountryRepository countryRepository, CountryService countryService, DiscographyRepository discographyRepository, DiscographyService discographyService, AlbumRepository albumRepository, AlbumService albumService, UserTypeRepository userTypeRepository, UserTypeService userTypeService, UserRepository userRepository, UserService userService, GenreRepository genreRepository, GenreService genreService, SongRepository songRepository, SongService songService) {
 		this.artistRepository = artistRepository;
 		this.artistService = artistService;
 		this.countryRepository = countryRepository;
@@ -38,6 +40,8 @@ public class SpotifyApplication {
 		this.userService = userService;
 		this.genreRepository = genreRepository;
 		this.genreService = genreService;
+		this.songRepository = songRepository;
+		this.songService = songService;
 	}
 
 	public static void main(String[] args) {
