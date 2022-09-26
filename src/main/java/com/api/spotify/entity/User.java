@@ -31,11 +31,11 @@ public class User {
     private String password;
 
     @JoinColumn(name = "country", nullable = false)
-    @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(optional = false, cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     private Country country;
 
     @JoinColumn(name = "user_type", nullable = false)
-    @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(optional = false, cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     private UserType userType;
 
     @Column(name = "password_date")

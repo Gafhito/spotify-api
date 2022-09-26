@@ -3,6 +3,7 @@ package com.api.spotify.entity;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "genre_x_song")
 public class GenreXSong {
 
     @Id
@@ -11,11 +12,11 @@ public class GenreXSong {
     private Long id;
 
     @JoinColumn(name = "song", nullable = false)
-    @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(optional = false, cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     private Song song;
 
     @JoinColumn(name = "genre", nullable = false)
-    @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(optional = false, cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     private Genre genre;
 
     public GenreXSong() {

@@ -15,11 +15,11 @@ public class Album {
     private String title;
 
     @JoinColumn(name = "discography", nullable = false)
-    @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(optional = false, cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     private Discography discography;
 
     @JoinColumn(name = "artist", nullable = false)
-    @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(optional = false, cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     private Artist artist;
 
     @Column(name = "cover_image", length = 50)

@@ -11,12 +11,10 @@ import java.util.Optional;
 @Repository
 public interface PlaylistXSongRepository extends JpaRepository<PlaylistXSong, Long> {
 
-    // Este Repository NO funciona (?
-
-    @Query(value = "select pxs.id, pxs.song, pxs.playlist from playlist_x_song pxs", nativeQuery = true)
+    @Query(value = "select pxs.id, pxs.playlist, pxs.song from playlist_x_song as pxs", nativeQuery = true)
     List<PlaylistXSong> findAll();
 
-    @Query(value = "select pxs.id, pxs.song, pxs.playlist from playlist_x_song pxs where pxs.id = ?1", nativeQuery = true)
+    @Query(value = "select pxs.id, pxs.playlist, pxs.song from playlist_x_song as pxs where pxs.id = ?1", nativeQuery = true)
     Optional<PlaylistXSong> findById(Long id);
 
 }

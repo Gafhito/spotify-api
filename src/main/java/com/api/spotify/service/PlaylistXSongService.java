@@ -1,6 +1,5 @@
 package com.api.spotify.service;
 
-import com.api.spotify.entity.GenreXSong;
 import com.api.spotify.entity.PlaylistXSong;
 import com.api.spotify.repository.PlaylistXSongRepository;
 import org.springframework.stereotype.Service;

@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "playlist")
 public class Playlist {
 
     @Id
@@ -12,7 +13,7 @@ public class Playlist {
     private Long id;
 
     @JoinColumn(name = "user")
-    @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(optional = false, cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     private User user;
 
     @Column(name = "title", length = 50, nullable = false)
@@ -22,7 +23,7 @@ public class Playlist {
     private Integer numberSongs;
 
     @JoinColumn(name = "status", nullable = false)
-    @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(optional = false, cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     private PlaylistStatus status;
 
     @Column(name = "date_created")
