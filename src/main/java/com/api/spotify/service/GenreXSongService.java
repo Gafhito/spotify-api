@@ -33,7 +33,7 @@ public class GenreXSongService {
                 genreXSong -> {
                     genreXSong.setSong(newGenreXSong.getSong());
                     genreXSong.setGenre(newGenreXSong.getGenre());
-                    return genreXSong;
+                    return genreXSongRepository.save(genreXSong);
                 }
         ).get();
     }

@@ -29,7 +29,7 @@ public class PlaylistXSongService {
                 playlistXSong -> {
                     playlistXSong.setSong(newPlaylistXSong.getSong());
                     playlistXSong.setPlaylist(newPlaylistXSong.getPlaylist());
-                    return playlistXSong;
+                    return playlistXSongRepository.save(playlistXSong);
                 }
         ).get();
     }

@@ -33,7 +33,7 @@ public class DiscographyService {
                 discography -> {
                     discography.setName(newDiscography.getName());
                     discography.setCountry(newDiscography.getCountry());
-                    return discography;
+                    return discographyRepository.save(discography);
                 }
         ).get();
     }

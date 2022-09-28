@@ -12,11 +12,11 @@ public class PlaylistXSong {
     private Long id;
 
     @JoinColumn(name = "song", nullable = false)
-    @ManyToOne(optional = false, cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false, cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     private Song song;
 
     @JoinColumn(name = "playlist", nullable = false)
-    @ManyToOne(optional = false, cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false, cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     private Playlist playlist;
 
     public PlaylistXSong() {

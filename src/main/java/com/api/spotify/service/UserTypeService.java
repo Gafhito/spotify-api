@@ -32,7 +32,7 @@ public class UserTypeService {
         return userTypeRepository.findById(id).map(
                 userType -> {
                     userType.setUserType(newUsertype.getUserType());
-                    return userType;
+                    return userTypeRepository.save(userType);
                 }
         ).get();
     }

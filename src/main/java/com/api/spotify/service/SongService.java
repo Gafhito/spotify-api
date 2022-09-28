@@ -36,7 +36,7 @@ public class SongService {
                     song.setPlaybackAmount(newSong.getPlaybackAmount());
                     song.setLikes(newSong.getLikes());
                     song.setAlbum(newSong.getAlbum());
-                    return song;
+                    return songRepository.save(song);
                 }
         ).get();
     }

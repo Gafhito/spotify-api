@@ -32,7 +32,7 @@ public class PlaylistStatusService {
         return playlistStatusRepository.findById(id).map(
                 playlistStatus -> {
                     playlistStatus.setDescription(newPlaylistStatus.getDescription());
-                    return playlistStatus;
+                    return playlistStatusRepository.save(playlistStatus);
                 }
         ).get();
     }

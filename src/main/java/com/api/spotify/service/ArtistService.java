@@ -33,7 +33,7 @@ public class ArtistService {
                 artist -> {
                     artist.setName(newArtist.getName());
                     artist.setImage(newArtist.getName());
-                    return artist;
+                    return artistRepository.save(artist);
                 }
         ).get();
     }

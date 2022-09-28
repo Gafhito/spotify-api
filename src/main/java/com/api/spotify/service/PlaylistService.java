@@ -36,7 +36,7 @@ public class PlaylistService {
                     playlist.setTitle(newPlaylist.getTitle());
                     playlist.setNumberSongs(newPlaylist.getNumberSongs());
                     playlist.setStatus(newPlaylist.getStatus());
-                    return playlist;
+                    return playlistRepository.save(playlist);
                 }
         ).get();
     }

@@ -32,7 +32,7 @@ public class GenreService {
         return genreRepository.findById(id).map(
                 genre -> {
                     genre.setGenre(newGenre.getGenre());
-                    return genre;
+                    return genreRepository.save(genre);
                 }
         ).get();
     }

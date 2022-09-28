@@ -32,7 +32,7 @@ public class CountryService {
         return countryRepository.findById(id).map(
                 country -> {
                     country.setCountry(newCountry.getCountry());
-                    return country;
+                    return countryRepository.save(country);
                 }
         ).get();
     }

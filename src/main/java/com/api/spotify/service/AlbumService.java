@@ -35,7 +35,7 @@ public class AlbumService {
                     album.setDiscography(newAlbum.getDiscography());
                     album.setArtist(newAlbum.getArtist());
                     album.setCoverImage(newAlbum.getCoverImage());
-                    return album;
+                    return albumRepository.save(album);
                 }
         ).get();
     }

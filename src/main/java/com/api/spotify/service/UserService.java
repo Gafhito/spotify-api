@@ -56,7 +56,7 @@ public class UserService {
                     user.setCountry(newUser.getCountry());
                     user.setUserType(newUser.getUserType());
                     user.setPasswordDate(dateNow);  // Acá actualiza la fecha actual, de ser distintas las contraseñas.
-                    return user;
+                    return userRepository.save(user);
                 }
         ).get();
     }
