@@ -2,6 +2,7 @@ package com.api.spotify.entity;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "playlist")

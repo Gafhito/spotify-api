@@ -33,7 +33,6 @@ public class SpotifyApplication {
 	private PlaylistXSongRepository playlistXSongRepository;
 	private PlaylistXSongService playlistXSongService;
 
-	/*
 	public SpotifyApplication(ArtistRepository artistRepository, ArtistService artistService, CountryRepository countryRepository, CountryService countryService, DiscographyRepository discographyRepository, DiscographyService discographyService, AlbumRepository albumRepository, AlbumService albumService, UserTypeRepository userTypeRepository, UserTypeService userTypeService, UserRepository userRepository, UserService userService, GenreRepository genreRepository, GenreService genreService, SongRepository songRepository, SongService songService, GenreXSongRepository genreXSongRepository, GenreXSongService genreXSongService, PlaylistStatusRepository playlistStatusRepository, PlaylistStatusService playlistStatusService, PlaylistRepository playlistRepository, PlaylistService playlistService, PlaylistXSongRepository playlistXSongRepository, PlaylistXSongService playlistXSongService) {
 		this.artistRepository = artistRepository;
 		this.artistService = artistService;
@@ -60,7 +59,6 @@ public class SpotifyApplication {
 		this.playlistXSongRepository = playlistXSongRepository;
 		this.playlistXSongService = playlistXSongService;
 	}
-	 */
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpotifyApplication.class, args);

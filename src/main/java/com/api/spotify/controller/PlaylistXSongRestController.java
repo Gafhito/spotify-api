@@ -2,6 +2,7 @@ package com.api.spotify.controller;
 
 import com.api.spotify.entity.PlaylistXSong;
 import com.api.spotify.service.PlaylistXSongService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,7 @@ import java.util.Optional;
 @RequestMapping("/playlist_x_song")
 public class PlaylistXSongRestController {
 
+    @Autowired
     private PlaylistXSongService playlistXSongService;
 
     public PlaylistXSongRestController(PlaylistXSongService playlistXSongService) {
